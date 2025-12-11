@@ -154,9 +154,13 @@ export default function Applicants() {
               <label className="form-label">Resume</label>
               <input type="file"className="form-control"onChange={handleFileChange}accept=".pdf,.doc,.docx"/>
               {editingApplicant?.resume && (
-                <small>
+                // <small>
+                //   Current file:{" "}
+                //   <a href={`http://localhost:5000/${editingApplicant.resume}`}target="_blank"rel="noopener noreferrer">Download</a>
+                // </small>
+                 <small>
                   Current file:{" "}
-                  <a href={`http://localhost:5000/${editingApplicant.resume}`}target="_blank"rel="noopener noreferrer">Download</a>
+                  <a href={`https://hrdashback.vercel.app/${editingApplicant.resume}`}target="_blank"rel="noopener noreferrer">Download</a>
                 </small>
               )}
             </div>
@@ -198,8 +202,11 @@ export default function Applicants() {
               <td>{a.position}</td>
               <td>{a.status}</td>
               <td>
-                {a.resume ? (
+                {/* {a.resume ? (
                   <a href={`http://localhost:5000/${a.resume}`}target="_blank"rel="noopener noreferrer">Download</a>) : ("No File"
+                )} */}
+                 {a.resume ? (
+                  <a href={`https://hrdashback.vercel.app/${a.resume}`}target="_blank"rel="noopener noreferrer">Download</a>) : ("No File"
                 )}
               </td>
               <td>

@@ -84,9 +84,13 @@ export default function Documents() {
               <td>{d.userName || d.userId?.name}</td>
               <td>{d.type}</td>
               <td>
-                <a href={`http://localhost:5000/${d.filePath}`}target="_blank"rel="noopener noreferrer">
+                {/* <a href={`http://localhost:5000/${d.filePath}`}target="_blank"rel="noopener noreferrer">
+                  {d.fileName}
+                </a> */}
+                <a href={` https://hrdashback.vercel.app/${d.filePath}`}target="_blank"rel="noopener noreferrer">
                   {d.fileName}
                 </a>
+               
               </td>
               <td>
                 <button className="btn btn-danger btn-sm"onClick={() => handleDelete(d._id)}>
